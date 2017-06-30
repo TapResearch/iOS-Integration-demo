@@ -13,26 +13,37 @@
 @interface ViewController ()
 
 @property (nonatomic, strong) UIActivityIndicatorView *activityIndicator;
+@property (nonatomic, strong) UIButton *surveyButton;
 
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(recieveSurveyAvilable)
-                                                 name:@"SurveyAvailableNotification" object:nil];
+    
+    self.surveyButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    self.surveyButton.frame = CGRectMake(100, 170, 100, 30);
+    self.surveyButton.layer.cornerRadius = 10;
+    self.surveyButton.backgroundColor = UIColor.blueColor;
+    [self.surveyButton setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
+    [self.surveyButton setTitle:@"Survey" forState:UIControlStateNormal];
+    
+    [self.surveyButton addTarget:self action:@selector(handleSurveySelected) forControlEvents:UIControlEventTouchUpInside];
+    self.surveyButton.center = self.view.center;
+    
     self.activityIndicator = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 20.0f, 20.0f)];
     [self.activityIndicator setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleGray];
     [self.view addSubview:self.activityIndicator];
     self.activityIndicator.center = self.view.center;
-    
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [self.activityIndicator startAnimating];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveSurveyAvailable)
+                                                 name:@"SurveyAvailableNotification" object:nil];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -41,31 +52,14 @@
     self.activityIndicator = nil;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (void)recieveSurveyAvilable {
-    
+- (void)receiveSurveyAvailable
+{
     [self.activityIndicator stopAnimating];
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    button.frame = CGRectMake(100, 170, 100, 30);
-    button.layer.cornerRadius = 10;
-    button.clipsToBounds = YES;
-    button.backgroundColor = UIColor.blueColor;
-    [button setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
-    [button setTitle:@"Survey" forState:UIControlStateNormal];
-    [button setTitle:@"Survey" forState:UIControlStateFocused];
-
-    [button addTarget:self action:@selector(handleSurveySelected) forControlEvents:UIControlEventTouchUpInside];
-    button.center = self.view.center;
-    button.alpha = 0.0;
-    [UIView animateWithDuration:0.75 animations:^{button.alpha = 1.0;}];
-    [self.view addSubview:button];
-
+    
+    self.surveyButton.alpha = 0.0;
+    [self.view addSubview:self.surveyButton];
+    [UIView animateWithDuration:0.75 animations:^{self.surveyButton.alpha = 1.0;}];
 }
-
 
 - (void)handleSurveySelected
 {

@@ -64,13 +64,12 @@
 }
 
 
--(void)tapResearchDidReceiveRewardWithQuantity:(NSInteger)quantity transactionIdentifier:(NSString *)transactionIdentifier currencyName:(NSString *)currencyName payoutEvent:(NSInteger)payoutEvent
+-(void)tapResearchDidReceiveRewardWithQuantity:(NSInteger)quantity transactionIdentifier:(NSString *)transactionIdentifier currencyName:(NSString *)currencyName payoutEvent:(NSInteger)payoutEvent offerIdentifier: (NSString *) offerIdentifier
 {
     NSLog(@"Reward Received!");
     NSString *title = @"Congrats!";
     NSString *message = [NSString stringWithFormat:@"You have just received %lu tokens for your efforts.", (long)quantity];
     [self showNotificationDialogwith:title message:message];
-
 }
 
 @end

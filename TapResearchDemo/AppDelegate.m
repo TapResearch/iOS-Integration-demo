@@ -49,26 +49,13 @@
 }
 
 #pragma mark - TapResearch
-- (void)tapResearchOnSurveyAvailable
-{
-    NSLog(@"Surveys available");
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"SurveyAvailableNotification" object:nil];
-}
-
-- (void)tapResearchOnSurveyNotAvailable
-{
-    NSLog(@"No surveys are available");
-    NSString *title = @"Survey update";
-    NSString *message = [NSString stringWithFormat:@"No surveys are avilable please try again later"];
-    [self showNotificationDialogwith:title message:message];
-}
 
 
--(void)tapResearchDidReceiveRewardWithQuantity:(NSInteger)quantity transactionIdentifier:(NSString *)transactionIdentifier currencyName:(NSString *)currencyName payoutEvent:(NSInteger)payoutEvent offerIdentifier: (NSString *) offerIdentifier
+-(void)tapResearchDidReceiveReward:(TRReward *)reward
 {
     NSLog(@"Reward Received!");
     NSString *title = @"Congrats!";
-    NSString *message = [NSString stringWithFormat:@"You have just received %lu tokens for your efforts.", (long)quantity];
+    NSString *message = [NSString stringWithFormat:@"You have just received %lu %@ for your efforts.", (long)reward.rewardAmount, reward.currencyName];
     [self showNotificationDialogwith:title message:message];
 }
 

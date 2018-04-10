@@ -37,13 +37,13 @@
     [self.activityIndicator setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleGray];
     [self.view addSubview:self.activityIndicator];
     self.activityIndicator.center = self.view.center;
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [self.activityIndicator startAnimating];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveSurveyAvailable)
-                                                 name:@"SurveyAvailableNotification" object:nil];
+    
+    [TapResearch initPlacementWithIdentifier:@"<Placement Identifier>" placementBlock:^(TRPlacement *placement) {
+        self.tapresearchPlacement = placement;
+        if (placement.isSurveyWallAvailable) {
+            [self showSurveyAvailable];
+        }
+    }];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -52,7 +52,7 @@
     self.activityIndicator = nil;
 }
 
-- (void)receiveSurveyAvailable
+- (void)showSurveyAvailable
 {
     [self.activityIndicator stopAnimating];
     
@@ -63,23 +63,21 @@
 
 - (void)handleSurveySelected
 {
-    [TapResearch showSurveyWithDelegate:self];
-    /*
-     Also can be called this way
-     [TapResearch showSurveyWithIdentifier:@"<Offer Identifier>" delegate:this];
-     */
+    if (self.tapresearchPlacement) {
+        [self.tapresearchPlacement showSurveyWallWithDelegate:self];
+    }
 }
 
 #pragma mark - TapResearchSurveyDelegate
 
-- (void)tapResearchSurveyModalOpened
+- (void)tapResearchSurveyWallOpenedWithPlacement:(TRPlacement *)placement;
 {
-    NSLog(@"Survey modal opened");
+    NSLog(@"Survey wall opened");
 }
 
-- (void)tapResearchSurveyModalDismissed
+- (void)tapResearchSurveyWallDismissedWithPlacement:(TRPlacement *)placement;
 {
-    NSLog(@"Survey modal closed");
+    NSLog(@"Survey wall dismissed");
 }
 
 @end

@@ -37,19 +37,23 @@
     [self.activityIndicator setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleGray];
     [self.view addSubview:self.activityIndicator];
     self.activityIndicator.center = self.view.center;
-    
-    [TapResearch initPlacementWithIdentifier:@"<Placement Identifier>" placementBlock:^(TRPlacement *placement) {
-        self.tapresearchPlacement = placement;
-        if (placement.isSurveyWallAvailable) {
-            [self showSurveyAvailable];
-        }
-    }];
+    [self initTapResearchPlacement];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"SurveyAvailableNotification" object:nil];
     self.activityIndicator = nil;
+}
+
+- (void)initTapResearchPlacement
+{
+    [TapResearch initPlacementWithIdentifier:@"<Placement Identifier>" placementBlock:^(TRPlacement *placement) {
+        self.tapresearchPlacement = placement;
+        if (placement.isSurveyWallAvailable) {
+            [self showSurveyAvailable];
+        }
+    }];
 }
 
 - (void)showSurveyAvailable
@@ -78,6 +82,7 @@
 - (void)tapResearchSurveyWallDismissedWithPlacement:(TRPlacement *)placement;
 {
     NSLog(@"Survey wall dismissed");
+    [self initTapResearchPlacement];
 }
 
 @end

@@ -82,6 +82,9 @@
 - (void)tapResearchSurveyWallDismissedWithPlacement:(TRPlacement *)placement;
 {
     NSLog(@"Survey wall dismissed");
+    /*TRPlacemnt will be disabled after the survey wall was visible.
+     If you want to show the placement again you'll have to initialize it again
+     */
     [self initTapResearchPlacement];
 }
 

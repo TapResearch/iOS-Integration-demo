@@ -48,7 +48,7 @@
 
 - (void)initTapResearchPlacement
 {
-    [TapResearch initPlacementWithIdentifier:@"<Placement Identifier>" placementBlock:^(TRPlacement *placement) {
+    [TapResearch initPlacementWithIdentifier:@"PLACMENT_IDENTIFIER" placementBlock:^(TRPlacement *placement) {
         self.tapresearchPlacement = placement;
         if (placement.isSurveyWallAvailable) {
             [self showSurveyAvailable];

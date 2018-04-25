@@ -17,7 +17,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [TapResearch initWithApiToken: @"<API Token>" delegate:self];
+    [TapResearch initWithApiToken: @"API_TOKEN" delegate:self];
     [TapResearch setUniqueUserIdentifier:@"<User Identifier>"];
     return YES;
 }

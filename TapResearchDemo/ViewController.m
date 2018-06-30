@@ -50,7 +50,7 @@
 {
     [TapResearch initPlacementWithIdentifier:@"PLACMENT_IDENTIFIER" placementBlock:^(TRPlacement *placement) {
         self.tapresearchPlacement = placement;
-        if (placement.isSurveyWallAvailable) {
+        if (placement.isSurveyWallAvailable && placement.placementCode != PLACEMENT_CODE_SDK_NOT_READY) {
             [self showSurveyAvailable];
         }
     }];

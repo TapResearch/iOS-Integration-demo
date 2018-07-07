@@ -1,12 +1,12 @@
 PODS:
-  - TapResearch (2.0.2)
+  - TapResearch (2.0.3)
 
 DEPENDENCIES:
-  - TapResearch (= 2.0.2)
+  - TapResearch (= 2.0.3)
 
 SPEC CHECKSUMS:
-  TapResearch: 4f1d254b5fc8bb7f461e3a31a8f4908275393ba1
+  TapResearch: 0bc7c5849bf1b576a1da0d0f95a3e888e7b4cfe8
 
-PODFILE CHECKSUM: 8821b23301de0a9e125610a003a73e18505c1468
+PODFILE CHECKSUM: 43eeea8599194d15e93187481d1ccfdeeeabfed9
 
 COCOAPODS: 1.4.0

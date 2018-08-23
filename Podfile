@@ -7,5 +7,5 @@ target 'TapResearchDemo' do
   # use_frameworks!
 
   #Pods for TestPod
-   pod 'TapResearch', '2.0.3'
+   pod 'TapResearch', '2.0.4'
 end

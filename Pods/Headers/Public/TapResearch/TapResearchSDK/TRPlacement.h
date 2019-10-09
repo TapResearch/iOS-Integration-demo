@@ -1,1 +1,0 @@
-../../../../TapResearch/TapResearchSDK.framework/Versions/A/Headers/TRPlacement.h

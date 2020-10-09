@@ -19,11 +19,11 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		EDA328228CE4B943625B65E21658CD27 /* Pods-TapResearchDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CDB9B5ED403A785D3108E8E4502AA2 /* Pods-TapResearchDemo-dummy.m */; };
+		1B17E8F47EA68F1CFCE7A1DEBF635A8C /* Pods-TapResearchDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B6E279B5A0DB1FE5EE759DA2F01CDA91 /* Pods-TapResearchDemo-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4933EE77C3317F10725AFBB5A683597B /* PBXContainerItemProxy */ = {
+		8829804F9B5CDAFF1365702E7D79FFC3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -33,19 +33,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		25D3342CFBB388F21AD6EFDDE167BF56 /* Pods-TapResearchDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TapResearchDemo.release.xcconfig"; sourceTree = "<group>"; };
+		199F79FF1E4737D693BED705A7838EF5 /* TapResearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TapResearch.release.xcconfig; sourceTree = "<group>"; };
+		3AEAE0FEF4E4580CC926F261910E36C9 /* Pods-TapResearchDemo-artifacts-Release-output-files.xcfilelist */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-TapResearchDemo-artifacts-Release-output-files.xcfilelist"; sourceTree = "<group>"; };
 		3B10A880E5D34E55FD1BBF0C6812352F /* libPods-TapResearchDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-TapResearchDemo.a"; path = "libPods-TapResearchDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		41B1A9DAAB3F78A702A0B227D15587AD /* TapResearchSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TapResearchSDK.framework; sourceTree = "<group>"; };
-		55CDB9B5ED403A785D3108E8E4502AA2 /* Pods-TapResearchDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TapResearchDemo-dummy.m"; sourceTree = "<group>"; };
-		995092E58AAACD86B12993366115BFB1 /* TapResearch.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TapResearch.xcconfig; sourceTree = "<group>"; };
+		3C0BA6BF18792F09624E39B050F8DCA6 /* Pods-TapResearchDemo-artifacts-Release-input-files.xcfilelist */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-TapResearchDemo-artifacts-Release-input-files.xcfilelist"; sourceTree = "<group>"; };
+		6000F9596859C88F3F0990C69FDD58BB /* Pods-TapResearchDemo-artifacts.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TapResearchDemo-artifacts.sh"; sourceTree = "<group>"; };
+		8FA61BB2BE6C9034B872B4229AEA36B5 /* Pods-TapResearchDemo-artifacts-Debug-input-files.xcfilelist */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-TapResearchDemo-artifacts-Debug-input-files.xcfilelist"; sourceTree = "<group>"; };
+		9A84F167FF1101F129FFBA2E71D7AC4E /* Pods-TapResearchDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TapResearchDemo-acknowledgements.plist"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		DAC1704B40160A4F9EA5A8DECBD5A1A2 /* Pods-TapResearchDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TapResearchDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
-		E84AA7581A40D4061163786A93EF8593 /* Pods-TapResearchDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TapResearchDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		F1AFE7DED50B1C3859B89F5CE18938F5 /* Pods-TapResearchDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TapResearchDemo-acknowledgements.plist"; sourceTree = "<group>"; };
+		A7EB9222908E579FA89E9DE7D281CCD2 /* Pods-TapResearchDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TapResearchDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B6E279B5A0DB1FE5EE759DA2F01CDA91 /* Pods-TapResearchDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TapResearchDemo-dummy.m"; sourceTree = "<group>"; };
+		B859996960218FDA7E21D59CA25CCC03 /* Pods-TapResearchDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TapResearchDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		CC0CDFFA9EC32CA79A22CE7671C6EEEB /* Pods-TapResearchDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TapResearchDemo-frameworks.sh"; sourceTree = "<group>"; };
+		D05887F21517DAD7BFD4C54BA9E9B75F /* Pods-TapResearchDemo-artifacts-Debug-output-files.xcfilelist */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-TapResearchDemo-artifacts-Debug-output-files.xcfilelist"; sourceTree = "<group>"; };
+		D5BDAE1D274B4ECABE952D9963F5F60A /* TapResearchSDK.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = TapResearchSDK.xcframework; sourceTree = "<group>"; };
+		F03F111850AF1B4B387F65306714016F /* TapResearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TapResearch.debug.xcconfig; sourceTree = "<group>"; };
+		F4D125C49E2B320F6F04904D191F14AE /* Pods-TapResearchDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TapResearchDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0EE56E5BA2BF880C38F165B3A817860E /* Frameworks */ = {
+		17CE6ED65B21A86AE7F6B2F8ADC991DB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -55,27 +62,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0ED3121DA313EFF4B1C995CFF6447CC0 /* TapResearch */ = {
+		0A371CD280FD5C69FA07BD2AA775C90E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EEC090BBFC864835A06EEEED07F677A9 /* Frameworks */,
-				8818054BA9682E29713D974AE3280803 /* Support Files */,
+				D5BDAE1D274B4ECABE952D9963F5F60A /* TapResearchSDK.xcframework */,
 			);
-			name = TapResearch;
-			path = TapResearch;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		16D2FF8A2B981F1DB4789F747CF96CE0 /* Pods-TapResearchDemo */ = {
+		18A557C91EC4B1AACA29F0673E1D6054 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				DAC1704B40160A4F9EA5A8DECBD5A1A2 /* Pods-TapResearchDemo-acknowledgements.markdown */,
-				F1AFE7DED50B1C3859B89F5CE18938F5 /* Pods-TapResearchDemo-acknowledgements.plist */,
-				55CDB9B5ED403A785D3108E8E4502AA2 /* Pods-TapResearchDemo-dummy.m */,
-				E84AA7581A40D4061163786A93EF8593 /* Pods-TapResearchDemo.debug.xcconfig */,
-				25D3342CFBB388F21AD6EFDDE167BF56 /* Pods-TapResearchDemo.release.xcconfig */,
+				F03F111850AF1B4B387F65306714016F /* TapResearch.debug.xcconfig */,
+				199F79FF1E4737D693BED705A7838EF5 /* TapResearch.release.xcconfig */,
 			);
-			name = "Pods-TapResearchDemo";
-			path = "Target Support Files/Pods-TapResearchDemo";
+			name = "Support Files";
+			path = "../Target Support Files/TapResearch";
 			sourceTree = "<group>";
 		};
 		4B6012E8D39E6165DCC75ABB154DD3D9 /* Products */ = {
@@ -86,27 +88,47 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8818054BA9682E29713D974AE3280803 /* Support Files */ = {
+		83A69E53BE9DD2B4E3C1DB4D89EA19AD /* Pods-TapResearchDemo */ = {
 			isa = PBXGroup;
 			children = (
-				995092E58AAACD86B12993366115BFB1 /* TapResearch.xcconfig */,
+				A7EB9222908E579FA89E9DE7D281CCD2 /* Pods-TapResearchDemo-acknowledgements.markdown */,
+				9A84F167FF1101F129FFBA2E71D7AC4E /* Pods-TapResearchDemo-acknowledgements.plist */,
+				6000F9596859C88F3F0990C69FDD58BB /* Pods-TapResearchDemo-artifacts.sh */,
+				8FA61BB2BE6C9034B872B4229AEA36B5 /* Pods-TapResearchDemo-artifacts-Debug-input-files.xcfilelist */,
+				D05887F21517DAD7BFD4C54BA9E9B75F /* Pods-TapResearchDemo-artifacts-Debug-output-files.xcfilelist */,
+				3C0BA6BF18792F09624E39B050F8DCA6 /* Pods-TapResearchDemo-artifacts-Release-input-files.xcfilelist */,
+				3AEAE0FEF4E4580CC926F261910E36C9 /* Pods-TapResearchDemo-artifacts-Release-output-files.xcfilelist */,
+				B6E279B5A0DB1FE5EE759DA2F01CDA91 /* Pods-TapResearchDemo-dummy.m */,
+				CC0CDFFA9EC32CA79A22CE7671C6EEEB /* Pods-TapResearchDemo-frameworks.sh */,
+				B859996960218FDA7E21D59CA25CCC03 /* Pods-TapResearchDemo.debug.xcconfig */,
+				F4D125C49E2B320F6F04904D191F14AE /* Pods-TapResearchDemo.release.xcconfig */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/TapResearch";
+			name = "Pods-TapResearchDemo";
+			path = "Target Support Files/Pods-TapResearchDemo";
 			sourceTree = "<group>";
 		};
 		BB27888C8F9D3AD709B4B9FA6234AFDC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				0ED3121DA313EFF4B1C995CFF6447CC0 /* TapResearch */,
+				BBC0669EFCCE152FB864757DDEC484E8 /* TapResearch */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		BC301252A327392FF944A18019BFE9F6 /* Targets Support Files */ = {
+		BBC0669EFCCE152FB864757DDEC484E8 /* TapResearch */ = {
 			isa = PBXGroup;
 			children = (
-				16D2FF8A2B981F1DB4789F747CF96CE0 /* Pods-TapResearchDemo */,
+				0A371CD280FD5C69FA07BD2AA775C90E /* Frameworks */,
+				18A557C91EC4B1AACA29F0673E1D6054 /* Support Files */,
+			);
+			name = TapResearch;
+			path = TapResearch;
+			sourceTree = "<group>";
+		};
+		C371434C8FE9D6480BCD1ECAEABF3735 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				83A69E53BE9DD2B4E3C1DB4D89EA19AD /* Pods-TapResearchDemo */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
@@ -118,7 +140,7 @@
 				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
 				BB27888C8F9D3AD709B4B9FA6234AFDC /* Pods */,
 				4B6012E8D39E6165DCC75ABB154DD3D9 /* Products */,
-				BC301252A327392FF944A18019BFE9F6 /* Targets Support Files */,
+				C371434C8FE9D6480BCD1ECAEABF3735 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -129,18 +151,10 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		EEC090BBFC864835A06EEEED07F677A9 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				41B1A9DAAB3F78A702A0B227D15587AD /* TapResearchSDK.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		DE09A38F4DA49772170479E0238E7316 /* Headers */ = {
+		1B265EBC663874239B359948135A34FC /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -152,16 +166,16 @@
 /* Begin PBXNativeTarget section */
 		B4D0B01663751C8CA5D696B3E0A67CED /* Pods-TapResearchDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CE880299F63050F218BC72986175DE8E /* Build configuration list for PBXNativeTarget "Pods-TapResearchDemo" */;
+			buildConfigurationList = 849B94895C115A1804F1DA7183958C08 /* Build configuration list for PBXNativeTarget "Pods-TapResearchDemo" */;
 			buildPhases = (
-				DE09A38F4DA49772170479E0238E7316 /* Headers */,
-				4BE8146BD06930A24AE302430145F2EB /* Sources */,
-				0EE56E5BA2BF880C38F165B3A817860E /* Frameworks */,
+				1B265EBC663874239B359948135A34FC /* Headers */,
+				7144AE1C8A50E4EA6DD5694B6B5AA12D /* Sources */,
+				17CE6ED65B21A86AE7F6B2F8ADC991DB /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				31405643A0555438CF275224B0A396FD /* PBXTargetDependency */,
+				E4754D91B06D2ED4297EB83E55D496CA /* PBXTargetDependency */,
 			);
 			name = "Pods-TapResearchDemo";
 			productName = "Pods-TapResearchDemo";
@@ -197,71 +211,26 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4BE8146BD06930A24AE302430145F2EB /* Sources */ = {
+		7144AE1C8A50E4EA6DD5694B6B5AA12D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDA328228CE4B943625B65E21658CD27 /* Pods-TapResearchDemo-dummy.m in Sources */,
+				1B17E8F47EA68F1CFCE7A1DEBF635A8C /* Pods-TapResearchDemo-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		31405643A0555438CF275224B0A396FD /* PBXTargetDependency */ = {
+		E4754D91B06D2ED4297EB83E55D496CA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = TapResearch;
 			target = 9D25198CA561195FF2925B1F3EC678F6 /* TapResearch */;
-			targetProxy = 4933EE77C3317F10725AFBB5A683597B /* PBXContainerItemProxy */;
+			targetProxy = 8829804F9B5CDAFF1365702E7D79FFC3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1C6F9D65B83AC12505046003AD8B2A28 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 25D3342CFBB388F21AD6EFDDE167BF56 /* Pods-TapResearchDemo.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		279C4050A2B28CF3E42DCD20C65AE13A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E84AA7581A40D4061163786A93EF8593 /* Pods-TapResearchDemo.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
 		2F5CE9157A6944C572608740FA41A6A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -326,28 +295,60 @@
 			};
 			name = Debug;
 		};
-		3C863AA0D47BD65C87DDC86D5856F785 /* Debug */ = {
+		7871E54BEE0BCC8FF9EF23EFF152FABA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 995092E58AAACD86B12993366115BFB1 /* TapResearch.xcconfig */;
+			baseConfigurationReference = F03F111850AF1B4B387F65306714016F /* TapResearch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		4D5A1A4264A724F0130FCB2CA8B6B0C4 /* Release */ = {
+		8D237823925367BD569283A2821843F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 995092E58AAACD86B12993366115BFB1 /* TapResearch.xcconfig */;
+			baseConfigurationReference = B859996960218FDA7E21D59CA25CCC03 /* Pods-TapResearchDemo.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		93E63931D8189301852A8123732D0EC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4D125C49E2B320F6F04904D191F14AE /* Pods-TapResearchDemo.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -413,6 +414,21 @@
 			};
 			name = Release;
 		};
+		C2D94BB00DDD7608B1C318D01F278FF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 199F79FF1E4737D693BED705A7838EF5 /* TapResearch.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -425,20 +441,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A4C008AFE365DA262F9499C5DF22F0BA /* Build configuration list for PBXAggregateTarget "TapResearch" */ = {
+		849B94895C115A1804F1DA7183958C08 /* Build configuration list for PBXNativeTarget "Pods-TapResearchDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3C863AA0D47BD65C87DDC86D5856F785 /* Debug */,
-				4D5A1A4264A724F0130FCB2CA8B6B0C4 /* Release */,
+				8D237823925367BD569283A2821843F1 /* Debug */,
+				93E63931D8189301852A8123732D0EC8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CE880299F63050F218BC72986175DE8E /* Build configuration list for PBXNativeTarget "Pods-TapResearchDemo" */ = {
+		A4C008AFE365DA262F9499C5DF22F0BA /* Build configuration list for PBXAggregateTarget "TapResearch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				279C4050A2B28CF3E42DCD20C65AE13A /* Debug */,
-				1C6F9D65B83AC12505046003AD8B2A28 /* Release */,
+				7871E54BEE0BCC8FF9EF23EFF152FABA /* Debug */,
+				C2D94BB00DDD7608B1C318D01F278FF0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

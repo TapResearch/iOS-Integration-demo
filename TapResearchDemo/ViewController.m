@@ -9,7 +9,6 @@
 #import "ViewController.h"
 #import <TapResearchSDK/TapResearchSDK.h>
 
-
 @interface ViewController ()
 
 @property (nonatomic, strong) UIActivityIndicatorView *activityIndicator;
@@ -27,28 +26,37 @@
     self.surveyButton.frame = CGRectMake(100, 170, 100, 30);
     self.surveyButton.layer.cornerRadius = 10;
     self.surveyButton.backgroundColor = UIColor.blueColor;
+    self.surveyButton.center = self.view.center;
     [self.surveyButton setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
     [self.surveyButton setTitle:@"Survey" forState:UIControlStateNormal];
-    
     [self.surveyButton addTarget:self action:@selector(handleSurveySelected) forControlEvents:UIControlEventTouchUpInside];
-    self.surveyButton.center = self.view.center;
     
     self.activityIndicator = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 20.0f, 20.0f)];
+    self.activityIndicator.center = self.view.center;
     [self.activityIndicator setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleGray];
     [self.view addSubview:self.activityIndicator];
-    self.activityIndicator.center = self.view.center;
+
     [self initTapResearchPlacement];
+
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(refreshTapResearchPlacement:)
+                                                 name:UIApplicationDidBecomeActiveNotification//UIApplicationWillEnterForegroundNotification
+                                               object:nil];
 }
 
-- (void)viewWillDisappear:(BOOL)animated
+- (void)refreshTapResearchPlacement:(NSNotification*)notification
 {
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"SurveyAvailableNotification" object:nil];
-    self.activityIndicator = nil;
+    /* If we have a placement already we need to refresh that if the app is brought into foreground. */
+    if (self.tapresearchPlacement) {
+        self.surveyButton.alpha = 0.0;
+        [self.activityIndicator startAnimating];
+        [self initTapResearchPlacement];
+    }
 }
 
 - (void)initTapResearchPlacement
 {
-    [TapResearch initPlacementWithIdentifier:@"PLACMENT_IDENTIFIER" placementBlock:^(TRPlacement *placement) {
+    [TapResearch initPlacementWithIdentifier:@"PLACEMENT_IDENTIFIER" placementBlock:^(TRPlacement *placement) {
         self.tapresearchPlacement = placement;
         if (placement.isSurveyWallAvailable && placement.placementCode != PLACEMENT_CODE_SDK_NOT_READY) {
             [self showSurveyAvailable];
@@ -59,10 +67,12 @@
 - (void)showSurveyAvailable
 {
     [self.activityIndicator stopAnimating];
-    
-    self.surveyButton.alpha = 0.0;
     [self.view addSubview:self.surveyButton];
-    [UIView animateWithDuration:0.75 animations:^{self.surveyButton.alpha = 1.0;}];
+    [UIView animateWithDuration:0.5
+                     animations:^{
+        self.surveyButton.alpha = 1.0;
+    }
+     ];
 }
 
 - (void)handleSurveySelected
@@ -85,6 +95,8 @@
     /*TRPlacemnt will be disabled after the survey wall was visible.
      If you want to show the placement again you'll have to initialize it again
      */
+    self.surveyButton.alpha = 0.0;
+    [self.activityIndicator startAnimating];
     [self initTapResearchPlacement];
 }
 

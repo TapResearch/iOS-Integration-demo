@@ -8,6 +8,9 @@
 
 #import "AppDelegate.h"
 
+#define TRApiToken @"API_TOKEN"
+#define UserIdentifier @"<User Identifier>"
+
 @interface AppDelegate ()
 
 @end
@@ -16,8 +19,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [TapResearch initWithApiToken: @"API_TOKEN" delegate:self];
-    [TapResearch setUniqueUserIdentifier:@"<User Identifier>"];
+    [TapResearch initWithApiToken:TRApiToken delegate:self];
+    [TapResearch setUniqueUserIdentifier:UserIdentifier];
     return YES;
 }
 

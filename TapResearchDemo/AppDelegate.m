@@ -8,20 +8,21 @@
 
 #import "AppDelegate.h"
 
+#define TRApiToken @"API_TOKEN"
+#define UserIdentifier @"<User Identifier>"
+
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [TapResearch initWithApiToken: @"API_TOKEN" delegate:self];
-    [TapResearch setUniqueUserIdentifier:@"<User Identifier>"];
+    [TapResearch initWithApiToken:TRApiToken delegate:self];
+    [TapResearch setUniqueUserIdentifier:UserIdentifier];
     return YES;
 }
-
 
 - (void)showNotificationDialogwith:(NSString *)title message:(NSString *)message
 {
@@ -34,29 +35,23 @@
         [controller addAction:action];
         
         [self.window.rootViewController presentViewController:controller animated:YES completion:nil];
-        
     }
     else {
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wdeprecated-declarations"
-        
         [[[UIAlertView alloc] initWithTitle:title message:message delegate:message cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];
-        
 #pragma GCC diagnostic pop
-        
     }
-
 }
 
 #pragma mark - TapResearch
 
-
-    -(void)tapResearchDidReceiveReward:(TRReward *)reward
-    {
-        NSLog(@"Reward Received!");
-        NSString *title = @"Congrats!";
-        NSString *message = [NSString stringWithFormat:@"You have just received %lu %@ for your efforts.", (long)reward.rewardAmount, reward.currencyName];
-        [self showNotificationDialogwith:title message:message];
-    }
+-(void)tapResearchDidReceiveReward:(TRReward *)reward
+{
+    NSLog(@"Reward Received!");
+    NSString *title = @"Congrats!";
+    NSString *message = [NSString stringWithFormat:@"You have just received %lu %@ for your efforts.", (long)reward.rewardAmount, reward.currencyName];
+    [self showNotificationDialogwith:title message:message];
+}
 
 @end

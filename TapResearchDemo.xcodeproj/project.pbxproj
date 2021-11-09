@@ -123,7 +123,6 @@
 			buildConfigurationList = 3B16B9841EF0BE8300DD0E68 /* Build configuration list for PBXNativeTarget "TapResearchDemo" */;
 			buildPhases = (
 				0FA4B0DF876BD2E2DE60955E /* [CP] Check Pods Manifest.lock */,
-				C71475944C5AC8E5437234EF /* [CP] Prepare Artifacts */,
 				3B16B96C1EF0BE8300DD0E68 /* Sources */,
 				3B16B96D1EF0BE8300DD0E68 /* Frameworks */,
 				3B16B96E1EF0BE8300DD0E68 /* Resources */,
@@ -211,32 +210,15 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-TapResearchDemo/Pods-TapResearchDemo-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/cocoapods-artifacts-${CONFIGURATION}.txt",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/TapResearchSDK/TapResearchSDK.framework/TapResearchSDK",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TapResearchSDK.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TapResearchDemo/Pods-TapResearchDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C71475944C5AC8E5437234EF /* [CP] Prepare Artifacts */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TapResearchDemo/Pods-TapResearchDemo-artifacts.sh",
-				"${PODS_ROOT}/TapResearch/TapResearchSDK.xcframework",
-			);
-			name = "[CP] Prepare Artifacts";
-			outputPaths = (
-				"${BUILT_PRODUCTS_DIR}/cocoapods-artifacts-${CONFIGURATION}.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TapResearchDemo/Pods-TapResearchDemo-artifacts.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

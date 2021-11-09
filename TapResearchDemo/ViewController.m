@@ -8,12 +8,14 @@
 
 #import "ViewController.h"
 #import <TapResearchSDK/TapResearchSDK.h>
+#import "AppDelegate.h"
 
 
-@interface ViewController ()
+@interface ViewController ()<TapResearchPlacementDelegate>
 
 @property (nonatomic, strong) UIActivityIndicatorView *activityIndicator;
 @property (nonatomic, strong) UIButton *surveyButton;
+@property (nonatomic, strong) NSMutableDictionary *placements;
 
 @end
 
@@ -48,12 +50,17 @@
 
 - (void)initTapResearchPlacement
 {
-    [TapResearch initPlacementWithIdentifier:@"PLACMENT_IDENTIFIER" placementBlock:^(TRPlacement *placement) {
-        self.tapresearchPlacement = placement;
-        if (placement.isSurveyWallAvailable && placement.placementCode != PLACEMENT_CODE_SDK_NOT_READY) {
-            [self showSurveyAvailable];
-        }
-    }];
+    AppDelegate *del = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+    [TapResearch initWithApiToken:@"API_TOKEN" rewardDelegate:del placementDelegate:self];
+    [TapResearch setUniqueUserIdentifier:@"DemoId"];
+    
+//    [TapResearch initPlacementWithIdentifier:@"PLACMENT_IDENTIFIER" placementBlock:^(TRPlacement *placement) {
+//        self.tapresearchPlacement = placement;
+//        if (placement.isSurveyWallAvailable && placement.placementCode != PLACEMENT_CODE_SDK_NOT_READY) {
+//            [self showSurveyAvailable];
+//        }
+//    }];
 }
 
 - (void)showSurveyAvailable
@@ -86,6 +93,21 @@
      If you want to show the placement again you'll have to initialize it again
      */
     [self initTapResearchPlacement];
+}
+
+#pragma mark - TapResearchPlacementDelegate
+
+- (void)placementReady:(nonnull TRPlacement *)placement {
+    NSLog(@"PLACEMENT READY! %@, wall %d, hot %d, maxlen %ld, plcode %ld", placement.placementIdentifier, placement.isSurveyWallAvailable, placement.hasHotSurvey, placement.maxSurveyLength, placement.placementCode);
+
+    [self.placements setObject:placement forKey:placement.placementIdentifier];
+}
+
+
+- (void)placementUnavailable:(nonnull NSString *)placementId {
+    NSLog(@"PLACEMENT UNAVAILABLE! %@", placementId);
+
+    [self.placements removeObjectForKey:placementId];
 }
 
 @end

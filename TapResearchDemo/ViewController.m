@@ -53,14 +53,7 @@
     AppDelegate *del = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
     [TapResearch initWithApiToken:@"API_TOKEN" rewardDelegate:del placementDelegate:self];
-    [TapResearch setUniqueUserIdentifier:@"DemoId"];
-    
-//    [TapResearch initPlacementWithIdentifier:@"PLACMENT_IDENTIFIER" placementBlock:^(TRPlacement *placement) {
-//        self.tapresearchPlacement = placement;
-//        if (placement.isSurveyWallAvailable && placement.placementCode != PLACEMENT_CODE_SDK_NOT_READY) {
-//            [self showSurveyAvailable];
-//        }
-//    }];
+    [TapResearch setUniqueUserIdentifier:@"<User Identifier>"];
 }
 
 - (void)showSurveyAvailable

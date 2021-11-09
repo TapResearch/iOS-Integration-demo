@@ -19,7 +19,6 @@
 {
 
     [TapResearch initWithApiToken:@"API_TOKEN" rewardDelegate: self placementDelegate: self];
-//    [TapResearch initWithApiToken: @"API_TOKEN" delegate:self];
 
     [TapResearch setUniqueUserIdentifier:@"<User Identifier>"];
     return YES;
@@ -54,10 +53,6 @@
 #pragma mark - TapResearch
 
 - (void)tapResearchDidReceiveRewards:(nonnull NSArray<TRReward *> *)rewards {
-//    NSLog(@"Reward Received!");
-//    NSString *title = @"Congrats!";
-//    NSString *message = [NSString stringWithFormat:@"You have just received %lu %@ for your efforts.", (long)rewards.firstObject, rewards.firstObject.currencyName];
-//    [self showNotificationDialogwith:title message:message];
     
     NSLog(@"Rewards (%ld) Received!", rewards.count);
     NSString *title = @"Congrats!";

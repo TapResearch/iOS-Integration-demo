@@ -39,7 +39,7 @@
     [self.activityIndicator setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleGray];
     [self.view addSubview:self.activityIndicator];
     self.activityIndicator.center = self.view.center;
-    [self initTapResearchPlacement];
+//    [self initTapResearchPlacement];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -52,8 +52,8 @@
 {
     AppDelegate *del = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
-    [TapResearch initWithApiToken:@"API_TOKEN" rewardDelegate:del placementDelegate:self];
-    [TapResearch setUniqueUserIdentifier:@"<User Identifier>"];
+//    [TapResearch initWithApiToken:@"9b99ccc0062035544a5b6579b0cfc954" rewardDelegate:del placementDelegate:self];
+//    [TapResearch setUniqueUserIdentifier:@"dude"];
 }
 
 - (void)showSurveyAvailable

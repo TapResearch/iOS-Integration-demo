@@ -18,9 +18,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 
-    [TapResearch initWithApiToken:@"API_TOKEN" rewardDelegate: self placementDelegate: self];
-
-    [TapResearch setUniqueUserIdentifier:@"<User Identifier>"];
+//    [TapResearch initWithApiToken:@"9b99ccc0062035544a5b6579b0cfc954" rewardDelegate: self placementDelegate: self];
+//
+//    [TapResearch setUniqueUserIdentifier:@"dude"];
     return YES;
 }
 

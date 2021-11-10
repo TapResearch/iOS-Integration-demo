@@ -17,8 +17,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [TapResearch initWithApiToken: @"API_TOKEN" delegate:self];
-    [TapResearch setUniqueUserIdentifier:@"<User Identifier>"];
+    [TapResearch initWithApiToken: @"7d08c962b40ac7aa0cf83c4d376fa36f" rewardDelegate:self placementDelegate:self];
+    [TapResearch setUniqueUserIdentifier:@"Nascar"];
     return YES;
 }
 
@@ -58,5 +58,22 @@
         NSString *message = [NSString stringWithFormat:@"You have just received %lu %@ for your efforts.", (long)reward.rewardAmount, reward.currencyName];
         [self showNotificationDialogwith:title message:message];
     }
+
+- (void)tapResearchDidReceiveRewards:(nonnull NSArray<TRReward *> *)rewards {
+    NSLog(@"");
+}
+
+
+- (void)placementReady:(nonnull TRPlacement *)placement {
+    NSLog(@"");
+    _tapresearchPlacement = placement;
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"SurveyAvailableNotification" object:nil];
+}
+
+- (void)placementUnavailable:(nonnull NSString *)placementId {
+    NSLog(@"");
+
+}
+
 
 @end

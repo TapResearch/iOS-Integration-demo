@@ -10,10 +10,10 @@
 #import <TapResearchSDK/TapResearchSDK.h>
 
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate, TapResearchRewardDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate, TapResearchRewardDelegate, TapResearchPlacementDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
+@property (strong, nonatomic) TRPlacement *tapresearchPlacement;
 
 @end
 

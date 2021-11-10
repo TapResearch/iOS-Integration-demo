@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "AppDelegate.h"
 #import <TapResearchSDK/TapResearchSDK.h>
 
 
@@ -37,33 +38,38 @@
     [self.activityIndicator setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleGray];
     [self.view addSubview:self.activityIndicator];
     self.activityIndicator.center = self.view.center;
-    [self initTapResearchPlacement];
+//    [self initTapResearchPlacement];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showSurveyAvailable:) name:@"SurveyAvailableNotification" object:nil];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"SurveyAvailableNotification" object:nil];
+
     self.activityIndicator = nil;
 }
 
-- (void)initTapResearchPlacement
+//- (void)initTapResearchPlacement
+//{
+//    [TapResearch initPlacementWithIdentifier:@"PLACMENT_IDENTIFIER" placementBlock:^(TRPlacement *placement) {
+//        self.tapresearchPlacement = placement;
+//        if (placement.isSurveyWallAvailable && placement.placementCode != PLACEMENT_CODE_SDK_NOT_READY) {
+//            [self showSurveyAvailable];
+//        }
+//    }];
+//}
+- (void)showSurveyAvailable:(NSNotification*)n
 {
-    [TapResearch initPlacementWithIdentifier:@"PLACMENT_IDENTIFIER" placementBlock:^(TRPlacement *placement) {
-        self.tapresearchPlacement = placement;
-        if (placement.isSurveyWallAvailable && placement.placementCode != PLACEMENT_CODE_SDK_NOT_READY) {
-            [self showSurveyAvailable];
-        }
-    }];
+    dispatch_async( dispatch_get_main_queue(), ^{
+        [[NSNotificationCenter defaultCenter] removeObserver:self name:@"SurveyAvailableNotification" object:nil];
+        AppDelegate *del = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+        _tapresearchPlacement = del.tapresearchPlacement;
+        [self.activityIndicator stopAnimating];
+        self.surveyButton.alpha = 0.0;
+        [self.view addSubview:self.surveyButton];
+        [UIView animateWithDuration:0.75 animations:^{self.surveyButton.alpha = 1.0;}];
+    });
 }
 
-- (void)showSurveyAvailable
-{
-    [self.activityIndicator stopAnimating];
-    
-    self.surveyButton.alpha = 0.0;
-    [self.view addSubview:self.surveyButton];
-    [UIView animateWithDuration:0.75 animations:^{self.surveyButton.alpha = 1.0;}];
-}
 
 - (void)handleSurveySelected
 {
@@ -85,7 +91,7 @@
     /*TRPlacemnt will be disabled after the survey wall was visible.
      If you want to show the placement again you'll have to initialize it again
      */
-    [self initTapResearchPlacement];
+//    [self initTapResearchPlacement];
 }
 
 @end

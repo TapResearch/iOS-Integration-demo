@@ -94,10 +94,12 @@
 //This delegate is called after the SDK is initialized and placements are ready
 - (void)placementReady:(nonnull TRPlacement *)placement {
     NSLog(@"✅ placement ready");
-    self.tapresearchPlacement = placement;
     
-    if (placement.isSurveyWallAvailable && placement.placementCode != PLACEMENT_CODE_SDK_NOT_READY) {
-        [self showSurveyAvailableButton];
+    if (!self.tapresearchPlacement) {
+        self.tapresearchPlacement = placement;
+        if (placement.isSurveyWallAvailable && placement.placementCode != PLACEMENT_CODE_SDK_NOT_READY) {
+            [self showSurveyAvailableButton];
+        }
     }
 }
 
@@ -113,6 +115,7 @@
 
 - (void)tapResearchSurveyWallDismissedWithPlacement:(TRPlacement *)placement; {
     NSLog(@"Survey wall dismissed");
+    self.tapresearchPlacement = nil;
 }
 
 @end

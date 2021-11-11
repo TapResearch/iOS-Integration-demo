@@ -15,65 +15,8 @@
 @implementation AppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    [TapResearch initWithApiToken: @"7d08c962b40ac7aa0cf83c4d376fa36f" rewardDelegate:self placementDelegate:self];
-    [TapResearch setUniqueUserIdentifier:@"Nascar"];
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     return YES;
 }
-
-
-- (void)showNotificationDialogwith:(NSString *)title message:(NSString *)message
-{
-    NSLog(@"No surveys available");
-    
-    if ([UIAlertController class]) {
-        UIAlertController *controller = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
-        
-        UIAlertAction *action = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
-        [controller addAction:action];
-        
-        [self.window.rootViewController presentViewController:controller animated:YES completion:nil];
-        
-    }
-    else {
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
-        
-        [[[UIAlertView alloc] initWithTitle:title message:message delegate:message cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];
-        
-#pragma GCC diagnostic pop
-        
-    }
-
-}
-
-#pragma mark - TapResearch
-
-
-    -(void)tapResearchDidReceiveReward:(TRReward *)reward
-    {
-        NSLog(@"Reward Received!");
-        NSString *title = @"Congrats!";
-        NSString *message = [NSString stringWithFormat:@"You have just received %lu %@ for your efforts.", (long)reward.rewardAmount, reward.currencyName];
-        [self showNotificationDialogwith:title message:message];
-    }
-
-- (void)tapResearchDidReceiveRewards:(nonnull NSArray<TRReward *> *)rewards {
-    NSLog(@"");
-}
-
-
-- (void)placementReady:(nonnull TRPlacement *)placement {
-    NSLog(@"");
-    _tapresearchPlacement = placement;
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"SurveyAvailableNotification" object:nil];
-}
-
-- (void)placementUnavailable:(nonnull NSString *)placementId {
-    NSLog(@"");
-
-}
-
 
 @end

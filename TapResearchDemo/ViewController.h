@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <TapResearchSDK/TapResearch.h>
 
-@interface ViewController : UIViewController<TapResearchSurveyDelegate>
+@interface ViewController : UIViewController<TapResearchSurveyDelegate, TapResearchRewardDelegate, TapResearchPlacementDelegate>
 
 @property (strong, nonatomic) TRPlacement *tapresearchPlacement;
 

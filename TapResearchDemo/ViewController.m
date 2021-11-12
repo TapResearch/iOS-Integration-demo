@@ -57,17 +57,13 @@
     });
 }
 
+// present survey wall when surveys are available
 - (void)showSurvey {
-    if (self.tapresearchPlacement.isSurveyWallAvailable) {
-        NSLog(@"Placement: %@:", self.tapresearchPlacement.placementIdentifier);
-        [self.tapresearchPlacement showSurveyWallWithDelegate:self];
-    }
-    else {
-        NSLog(@"Placement %@ isn't available", self.tapresearchPlacement.placementIdentifier);
-    }
+    NSLog(@"Placement: %@:", self.tapresearchPlacement.placementIdentifier);
+    [self.tapresearchPlacement showSurveyWallWithDelegate:self];
 }
 
-//You must init the sdk with your own api token and uniqueIdentifier
+//SDK must be initialized with an api token and uniqueIdentifier
 - (void)initSDK {
     [TapResearch initWithApiToken: @"7d08c962b40ac7aa0cf83c4d376fa36f" rewardDelegate:self placementDelegate:self];
     [TapResearch setUniqueUserIdentifier:@"Nascar"];
@@ -83,7 +79,7 @@
 
 #pragma mark - TapResearch Delegates
 
-//When the TapResearch webview is dismissed, this delegate is called if there is a reward present
+// When the TapResearch modal is dismissed, this method is called with an array of TRReward to be used within your app
 - (void)tapResearchDidReceiveRewards:(nonnull NSArray<TRReward *> *)rewards {
     NSLog(@"Reward Received!");
     NSString *title = @"Congrats!";
@@ -91,7 +87,7 @@
     [self showNotificationDialogwith:title message:message];
 }
 
-//This delegate is called after the SDK is initialized and placements are ready
+// After the SDK is initialized, this delegate is called for each placement
 - (void)placementReady:(nonnull TRPlacement *)placement {
     NSLog(@"✅ placement ready");
     
@@ -103,16 +99,19 @@
     }
 }
 
+// If the placement is not available for any reason, this delegate is called
 - (void)placementUnavailable:(nonnull NSString *)placementId {
     NSLog(@"Placement Unavailable");
 }
 
 #pragma mark - TapResearchSurveyDelegate
 
+// This delegate is called when the survey wall is opened
 - (void)tapResearchSurveyWallOpenedWithPlacement:(TRPlacement *)placement; {
     NSLog(@"Survey wall opened");
 }
 
+// This delegate is called when the survey wall is dismissed
 - (void)tapResearchSurveyWallDismissedWithPlacement:(TRPlacement *)placement; {
     NSLog(@"Survey wall dismissed");
     self.tapresearchPlacement = nil;

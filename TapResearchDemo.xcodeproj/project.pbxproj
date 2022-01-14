@@ -113,7 +113,6 @@
 				BB802E0863DA84EE14A99BE7 /* Pods-TapResearchDemo.debug.xcconfig */,
 				628BD431DAC5C5C68026015E /* Pods-TapResearchDemo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -146,7 +145,7 @@
 		3BAA5ECE1ED38D5700587E73 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 1320;
 				ORGANIZATIONNAME = "Ilan Caspi";
 				TargetAttributes = {
 					3B16B96F1EF0BE8300DD0E68 = {
@@ -158,10 +157,9 @@
 			};
 			buildConfigurationList = 3BAA5ED11ED38D5700587E73 /* Build configuration list for PBXProject "TapResearchDemo" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 			);

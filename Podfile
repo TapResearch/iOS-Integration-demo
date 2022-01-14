@@ -1,11 +1,11 @@
-source 'https://github.com/CocoaPods/Specs'
-source 'https://github.com/CocoaPods/Specs.git'
 # Uncomment the next line to define a global platform for your project
-#platform :ios, '10.3'
+# platform :ios, '10.0'
+
 
 target 'TapResearchDemo' do
-  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
-  # use_frameworks!
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
 
-   pod 'TapResearch', '2.1.3'
+  pod 'TapResearch', '2.4.1'
+
 end

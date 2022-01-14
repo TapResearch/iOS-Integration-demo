@@ -10,10 +10,9 @@
 #import <TapResearchSDK/TapResearchSDK.h>
 
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate, TapResearchRewardDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
 
 @end
 

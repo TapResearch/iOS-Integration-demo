@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "TapResearchSDK.h"
+#import <TapResearchSDK/TapResearchSDK.h>
 
 #define PLACEMENT_CODE_SDK_NOT_READY -1
 
@@ -25,5 +25,7 @@
 @property (nonatomic, assign, readonly) NSInteger minSurveyLength;
 
 - (void)showSurveyWallWithDelegate:(id<TapResearchSurveyDelegate>)surveyDelegate;
+- (void)showSurveyWallWithDelegate:(id<TapResearchSurveyDelegate>)surveyDelegate
+                  customParameters:(TRPlacementCustomParameterList *)customParameters;
 
 @end

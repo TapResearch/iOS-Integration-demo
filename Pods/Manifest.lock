@@ -1,16 +1,16 @@
 PODS:
-  - TapResearch-Internal (2.4.1)
+  - TapResearch (2.4.1)
 
 DEPENDENCIES:
-  - TapResearch-Internal (= 2.4.1)
+  - TapResearch (= 2.4.1)
 
 SPEC REPOS:
-  https://github.com/TapResearch/iOS-PodSpecs.git:
-    - TapResearch-Internal
+  trunk:
+    - TapResearch
 
 SPEC CHECKSUMS:
-  TapResearch-Internal: 0a2b8e58b816ed894cc68bc19982bcc053b7d447
+  TapResearch: 727f362216e7e15e53fbf25217a4c4522cbfa9cd
 
-PODFILE CHECKSUM: ce503b7ff58650effc6fded74d6fe1d0b2bc3f44
+PODFILE CHECKSUM: eccce58b0ed400d81430cbd1eadc76648e06eb13
 
 COCOAPODS: 1.11.2

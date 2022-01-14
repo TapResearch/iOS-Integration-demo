@@ -24,11 +24,11 @@
     [super viewDidLoad];
     
     self.surveyButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    self.surveyButton.frame = CGRectMake(100, 170, 200, 30);
+    self.surveyButton.frame = CGRectMake(100, 170, 200, 50);
     self.surveyButton.layer.cornerRadius = 10;
-    self.surveyButton.backgroundColor = UIColor.blueColor;
+    self.surveyButton.backgroundColor = UIColor.systemBlueColor;
     [self.surveyButton setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
-    [self.surveyButton setTitle:@"Survey Available!" forState:UIControlStateNormal];
+    [self.surveyButton setTitle:@"Tap to take survey" forState:UIControlStateNormal];
     self.surveyButton.alpha = 0.0;
     [self.view addSubview:self.surveyButton];
     

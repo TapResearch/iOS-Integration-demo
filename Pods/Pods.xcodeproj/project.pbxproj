@@ -7,59 +7,59 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
-		69C7667228CBDE5BB70A981DB9794F56 /* TapResearch-Internal */ = {
+		9D25198CA561195FF2925B1F3EC678F6 /* TapResearch */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = A57B65271B7B65257AADF65C90D25A43 /* Build configuration list for PBXAggregateTarget "TapResearch-Internal" */;
+			buildConfigurationList = 1232F82CDF4DD22EA681F37A39084B36 /* Build configuration list for PBXAggregateTarget "TapResearch" */;
 			buildPhases = (
-				77862850E4CF7C12F1273533CB977715 /* [CP] Copy XCFrameworks */,
+				8B06AC3CC8710F0D530A8F88CDDAF2A6 /* [CP] Copy XCFrameworks */,
 			);
 			dependencies = (
 			);
-			name = "TapResearch-Internal";
+			name = TapResearch;
 		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		118F63547BDADE0E533E4A1C0FA7636D /* Pods-TapResearchDemo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE6484F2AD5313795D75DAF2305F5FB /* Pods-TapResearchDemo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		11CA2A1F46B7427BA49A19C6F13E3DE9 /* Pods-TapResearchDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 873C19F0A3E1D448CFBDBBECE24C8616 /* Pods-TapResearchDemo-dummy.m */; };
-		DED65FABDB831C85765D6C898A340357 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		24576543774D6E4C8AD83ED936B7A8B2 /* Pods-TapResearchDemo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE6484F2AD5313795D75DAF2305F5FB /* Pods-TapResearchDemo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5586890545D444F33572E1D0AC7246BB /* Pods-TapResearchDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 873C19F0A3E1D448CFBDBBECE24C8616 /* Pods-TapResearchDemo-dummy.m */; };
+		CCD5FA07A40299E9740AA09051347D1F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		6708AE7D9221B07FEB9E71F5101F60EF /* PBXContainerItemProxy */ = {
+		3ED7F1C637BC65565B34F94059D66891 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 69C7667228CBDE5BB70A981DB9794F56;
-			remoteInfo = "TapResearch-Internal";
+			remoteGlobalIDString = 9D25198CA561195FF2925B1F3EC678F6;
+			remoteInfo = TapResearch;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		03FC45480631E9D07B1EBD4FF4C2CA84 /* Pods-TapResearchDemo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TapResearchDemo.modulemap"; sourceTree = "<group>"; };
+		2BFA7D00FAB46590BD069C536190F26D /* TapResearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TapResearch.release.xcconfig; sourceTree = "<group>"; };
 		2C590E7B0FC5F4298C97250DFD981E06 /* Pods-TapResearchDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TapResearchDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		3B10A880E5D34E55FD1BBF0C6812352F /* Pods-TapResearchDemo */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-TapResearchDemo"; path = Pods_TapResearchDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		47E7CBBA947B86A834F19BC3C1FFE40F /* TapResearch-Internal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "TapResearch-Internal.release.xcconfig"; sourceTree = "<group>"; };
+		49976B938BD0CC1040978F6B8620B4C2 /* TapResearch-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "TapResearch-xcframeworks.sh"; sourceTree = "<group>"; };
 		4E9385BC9663846348DD34BBF9E9F3FE /* Pods-TapResearchDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TapResearchDemo.release.xcconfig"; sourceTree = "<group>"; };
 		52B25254CC52FE4B966F672FDAEB0832 /* Pods-TapResearchDemo-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TapResearchDemo-Info.plist"; sourceTree = "<group>"; };
 		58E8C2AD72212D271C6B0606F92414C9 /* Pods-TapResearchDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TapResearchDemo-acknowledgements.plist"; sourceTree = "<group>"; };
-		59CD9700F881C8E04D3289E375E7D404 /* TapResearch-Internal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "TapResearch-Internal.debug.xcconfig"; sourceTree = "<group>"; };
 		5ABA14BA893078CBF537B9CD28DD58B1 /* Pods-TapResearchDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TapResearchDemo-frameworks.sh"; sourceTree = "<group>"; };
 		5AE6484F2AD5313795D75DAF2305F5FB /* Pods-TapResearchDemo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TapResearchDemo-umbrella.h"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		873C19F0A3E1D448CFBDBBECE24C8616 /* Pods-TapResearchDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TapResearchDemo-dummy.m"; sourceTree = "<group>"; };
-		8993A4BB42D40D734568A5A9E75E41C1 /* TapResearchSDK.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = TapResearchSDK.xcframework; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		CA0D06087790F48FBD7EAEAD6CD4395D /* TapResearchSDK.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = TapResearchSDK.xcframework; sourceTree = "<group>"; };
 		D1464F7D5B093D87CC629130DF98CD0E /* Pods-TapResearchDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TapResearchDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
-		F2D6C2F186E617F04B6D5C60E6B2974E /* TapResearch-Internal-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "TapResearch-Internal-xcframeworks.sh"; sourceTree = "<group>"; };
+		DA93253BBB2847AF35D2DCFD277123C9 /* TapResearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TapResearch.debug.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3D68D453D88865B2EB45195DC17705BB /* Frameworks */ = {
+		21D7993D3FE0070EC5D1B0D6C143EA21 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DED65FABDB831C85765D6C898A340357 /* Foundation.framework in Frameworks */,
+				CCD5FA07A40299E9740AA09051347D1F /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,14 +82,6 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		53739E06F390A9301761E3762E7960BB /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				F9C42E3B648813BB74D44C6C9D22A1D3 /* TapResearch-Internal */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -98,12 +90,15 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		704EAE3C9D9B2FB21365387450146D70 /* Frameworks */ = {
+		6D1CFF23280AF44888B6982983274CFA /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				8993A4BB42D40D734568A5A9E75E41C1 /* TapResearchSDK.xcframework */,
+				49976B938BD0CC1040978F6B8620B4C2 /* TapResearch-xcframeworks.sh */,
+				DA93253BBB2847AF35D2DCFD277123C9 /* TapResearch.debug.xcconfig */,
+				2BFA7D00FAB46590BD069C536190F26D /* TapResearch.release.xcconfig */,
 			);
-			name = Frameworks;
+			name = "Support Files";
+			path = "../Target Support Files/TapResearch";
 			sourceTree = "<group>";
 		};
 		797DA7241179CC183A7790E08DF2815C /* Pods-TapResearchDemo */ = {
@@ -123,15 +118,12 @@
 			path = "Target Support Files/Pods-TapResearchDemo";
 			sourceTree = "<group>";
 		};
-		B6D07C8EF5A9569F265C728009CE442C /* Support Files */ = {
+		BB27888C8F9D3AD709B4B9FA6234AFDC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F2D6C2F186E617F04B6D5C60E6B2974E /* TapResearch-Internal-xcframeworks.sh */,
-				59CD9700F881C8E04D3289E375E7D404 /* TapResearch-Internal.debug.xcconfig */,
-				47E7CBBA947B86A834F19BC3C1FFE40F /* TapResearch-Internal.release.xcconfig */,
+				D5BAC440A4F27C2478F8A1E2625E593C /* TapResearch */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/TapResearch-Internal";
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -139,7 +131,7 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				53739E06F390A9301761E3762E7960BB /* Pods */,
+				BB27888C8F9D3AD709B4B9FA6234AFDC /* Pods */,
 				056B409EA03EEFA5A9FBD0E291FC4D42 /* Products */,
 				529CC85ADA0338D341C98DD7A65B35C7 /* Targets Support Files */,
 			);
@@ -153,24 +145,32 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F9C42E3B648813BB74D44C6C9D22A1D3 /* TapResearch-Internal */ = {
+		D5BAC440A4F27C2478F8A1E2625E593C /* TapResearch */ = {
 			isa = PBXGroup;
 			children = (
-				704EAE3C9D9B2FB21365387450146D70 /* Frameworks */,
-				B6D07C8EF5A9569F265C728009CE442C /* Support Files */,
+				D66E5BFB94262FCD6A865DE99FB87948 /* Frameworks */,
+				6D1CFF23280AF44888B6982983274CFA /* Support Files */,
 			);
-			name = "TapResearch-Internal";
-			path = "TapResearch-Internal";
+			name = TapResearch;
+			path = TapResearch;
+			sourceTree = "<group>";
+		};
+		D66E5BFB94262FCD6A865DE99FB87948 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CA0D06087790F48FBD7EAEAD6CD4395D /* TapResearchSDK.xcframework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		814553571C14D37FA28A034C90A73C79 /* Headers */ = {
+		75E3996A22340CC833E5B99CAE5BB3AF /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				118F63547BDADE0E533E4A1C0FA7636D /* Pods-TapResearchDemo-umbrella.h in Headers */,
+				24576543774D6E4C8AD83ED936B7A8B2 /* Pods-TapResearchDemo-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,17 +179,17 @@
 /* Begin PBXNativeTarget section */
 		B4D0B01663751C8CA5D696B3E0A67CED /* Pods-TapResearchDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7AC49032DE4B1253ED1AAD8E25260DA3 /* Build configuration list for PBXNativeTarget "Pods-TapResearchDemo" */;
+			buildConfigurationList = 953BA3DDAB35A533E9A80DCAB300C0F0 /* Build configuration list for PBXNativeTarget "Pods-TapResearchDemo" */;
 			buildPhases = (
-				814553571C14D37FA28A034C90A73C79 /* Headers */,
-				40AC1601F2ED5B0F469977175BBF4CAF /* Sources */,
-				3D68D453D88865B2EB45195DC17705BB /* Frameworks */,
-				8662306A1FBA99E9B206F7A63F7EB91E /* Resources */,
+				75E3996A22340CC833E5B99CAE5BB3AF /* Headers */,
+				B632E0274D0DC36A51CD518B8790A218 /* Sources */,
+				21D7993D3FE0070EC5D1B0D6C143EA21 /* Frameworks */,
+				6492F087C81D79AB5876F7C4DB2BC56C /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				94889FD4FD629E3E43DFA9A2BAA2C301 /* PBXTargetDependency */,
+				31C18245A087D86665397B07B9E0AD12 /* PBXTargetDependency */,
 			);
 			name = "Pods-TapResearchDemo";
 			productName = Pods_TapResearchDemo;
@@ -219,13 +219,13 @@
 			projectRoot = "";
 			targets = (
 				B4D0B01663751C8CA5D696B3E0A67CED /* Pods-TapResearchDemo */,
-				69C7667228CBDE5BB70A981DB9794F56 /* TapResearch-Internal */,
+				9D25198CA561195FF2925B1F3EC678F6 /* TapResearch */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		8662306A1FBA99E9B206F7A63F7EB91E /* Resources */ = {
+		6492F087C81D79AB5876F7C4DB2BC56C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -235,83 +235,50 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		77862850E4CF7C12F1273533CB977715 /* [CP] Copy XCFrameworks */ = {
+		8B06AC3CC8710F0D530A8F88CDDAF2A6 /* [CP] Copy XCFrameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/TapResearch-Internal/TapResearch-Internal-xcframeworks.sh",
-				"${PODS_ROOT}/TapResearch-Internal/TapResearchSDK.xcframework",
+				"${PODS_ROOT}/Target Support Files/TapResearch/TapResearch-xcframeworks.sh",
+				"${PODS_ROOT}/TapResearch/TapResearchSDK.xcframework",
 			);
 			name = "[CP] Copy XCFrameworks";
 			outputPaths = (
-				"${PODS_XCFRAMEWORKS_BUILD_DIR}/TapResearch-Internal/TapResearchSDK.framework",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/TapResearch/TapResearchSDK.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/TapResearch-Internal/TapResearch-Internal-xcframeworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/TapResearch/TapResearch-xcframeworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		40AC1601F2ED5B0F469977175BBF4CAF /* Sources */ = {
+		B632E0274D0DC36A51CD518B8790A218 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11CA2A1F46B7427BA49A19C6F13E3DE9 /* Pods-TapResearchDemo-dummy.m in Sources */,
+				5586890545D444F33572E1D0AC7246BB /* Pods-TapResearchDemo-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		94889FD4FD629E3E43DFA9A2BAA2C301 /* PBXTargetDependency */ = {
+		31C18245A087D86665397B07B9E0AD12 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "TapResearch-Internal";
-			target = 69C7667228CBDE5BB70A981DB9794F56 /* TapResearch-Internal */;
-			targetProxy = 6708AE7D9221B07FEB9E71F5101F60EF /* PBXContainerItemProxy */;
+			name = TapResearch;
+			target = 9D25198CA561195FF2925B1F3EC678F6 /* TapResearch */;
+			targetProxy = 3ED7F1C637BC65565B34F94059D66891 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		32F12C7DCF8031427E4D2482709F1F44 /* Debug */ = {
+		594CE8E173B5919637D8EFB65AC2EC45 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2C590E7B0FC5F4298C97250DFD981E06 /* Pods-TapResearchDemo.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-TapResearchDemo/Pods-TapResearchDemo-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-TapResearchDemo/Pods-TapResearchDemo.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		4B69D7ABB2D34E3A72EBC097A0B34977 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 59CD9700F881C8E04D3289E375E7D404 /* TapResearch-Internal.debug.xcconfig */;
+			baseConfigurationReference = 2BFA7D00FAB46590BD069C536190F26D /* TapResearch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -320,8 +287,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
-			name = Debug;
+			name = Release;
 		};
 		6048CCBCE84FD9EC87E5C4DDC95CBDC3 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -385,22 +353,7 @@
 			};
 			name = Release;
 		};
-		79FBD5F4D7047D6033E4332734D1381C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 47E7CBBA947B86A834F19BC3C1FFE40F /* TapResearch-Internal.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		DE2CACE21A6B84727DCA9CF89EF471C9 /* Release */ = {
+		791404628AE6272BB8B4D1E6198346AB /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4E9385BC9663846348DD34BBF9E9F3FE /* Pods-TapResearchDemo.release.xcconfig */;
 			buildSettings = {
@@ -433,6 +386,53 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		89A52361C55373B67251D7590DF3ECC8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C590E7B0FC5F4298C97250DFD981E06 /* Pods-TapResearchDemo.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TapResearchDemo/Pods-TapResearchDemo-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TapResearchDemo/Pods-TapResearchDemo.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BF7CE76AEB66F0B9C2B2E6D4317696DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA93253BBB2847AF35D2DCFD277123C9 /* TapResearch.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
 		};
 		F9CAEDF63CF13D31D7211611608C303B /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -503,6 +503,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1232F82CDF4DD22EA681F37A39084B36 /* Build configuration list for PBXAggregateTarget "TapResearch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF7CE76AEB66F0B9C2B2E6D4317696DE /* Debug */,
+				594CE8E173B5919637D8EFB65AC2EC45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -512,20 +521,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7AC49032DE4B1253ED1AAD8E25260DA3 /* Build configuration list for PBXNativeTarget "Pods-TapResearchDemo" */ = {
+		953BA3DDAB35A533E9A80DCAB300C0F0 /* Build configuration list for PBXNativeTarget "Pods-TapResearchDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				32F12C7DCF8031427E4D2482709F1F44 /* Debug */,
-				DE2CACE21A6B84727DCA9CF89EF471C9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A57B65271B7B65257AADF65C90D25A43 /* Build configuration list for PBXAggregateTarget "TapResearch-Internal" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4B69D7ABB2D34E3A72EBC097A0B34977 /* Debug */,
-				79FBD5F4D7047D6033E4332734D1381C /* Release */,
+				89A52361C55373B67251D7590DF3ECC8 /* Debug */,
+				791404628AE6272BB8B4D1E6198346AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -13,7 +13,7 @@
 		3B16B97D1EF0BE8300DD0E68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B16B97B1EF0BE8300DD0E68 /* Main.storyboard */; };
 		3B16B97F1EF0BE8300DD0E68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B16B97E1EF0BE8300DD0E68 /* Assets.xcassets */; };
 		3B16B9821EF0BE8300DD0E68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B16B9801EF0BE8300DD0E68 /* LaunchScreen.storyboard */; };
-		91C66F6B6842F7C5DF3CD4FA /* Pods_TapResearchDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A5AC344A7075FC1B3C5C440 /* Pods_TapResearchDemo.framework */; };
+		6EDA3E6F4722C675E1BD97C5 /* Pods_TapResearchDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 079B9497C8828C2619D25698 /* Pods_TapResearchDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,7 +30,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1E77400464D8E0C0CC181F6F /* Pods-TapResearchDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TapResearchDemo.release.xcconfig"; path = "Target Support Files/Pods-TapResearchDemo/Pods-TapResearchDemo.release.xcconfig"; sourceTree = "<group>"; };
+		079B9497C8828C2619D25698 /* Pods_TapResearchDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TapResearchDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B16B9701EF0BE8300DD0E68 /* TapResearchDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TapResearchDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B16B9731EF0BE8300DD0E68 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3B16B9751EF0BE8300DD0E68 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -41,8 +41,8 @@
 		3B16B97E1EF0BE8300DD0E68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B16B9811EF0BE8300DD0E68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B16B9831EF0BE8300DD0E68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7051711EE4802ADF9023025E /* Pods-TapResearchDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TapResearchDemo.debug.xcconfig"; path = "Target Support Files/Pods-TapResearchDemo/Pods-TapResearchDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		8A5AC344A7075FC1B3C5C440 /* Pods_TapResearchDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TapResearchDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		628BD431DAC5C5C68026015E /* Pods-TapResearchDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TapResearchDemo.release.xcconfig"; path = "Target Support Files/Pods-TapResearchDemo/Pods-TapResearchDemo.release.xcconfig"; sourceTree = "<group>"; };
+		BB802E0863DA84EE14A99BE7 /* Pods-TapResearchDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TapResearchDemo.debug.xcconfig"; path = "Target Support Files/Pods-TapResearchDemo/Pods-TapResearchDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,21 +50,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91C66F6B6842F7C5DF3CD4FA /* Pods_TapResearchDemo.framework in Frameworks */,
+				6EDA3E6F4722C675E1BD97C5 /* Pods_TapResearchDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		27D2741E408B865178A41B8C /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				8A5AC344A7075FC1B3C5C440 /* Pods_TapResearchDemo.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		3B16B9711EF0BE8300DD0E68 /* TapResearchDemo */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,8 +86,8 @@
 			children = (
 				3B16B9711EF0BE8300DD0E68 /* TapResearchDemo */,
 				3BAA5ED71ED38D5700587E73 /* Products */,
-				B0B4B71859BC25E30905FCE1 /* Pods */,
-				27D2741E408B865178A41B8C /* Frameworks */,
+				9DDEA676DC1C1CF8B731C5E7 /* Pods */,
+				9965E4522F46B360013EF56E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,11 +99,19 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B0B4B71859BC25E30905FCE1 /* Pods */ = {
+		9965E4522F46B360013EF56E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7051711EE4802ADF9023025E /* Pods-TapResearchDemo.debug.xcconfig */,
-				1E77400464D8E0C0CC181F6F /* Pods-TapResearchDemo.release.xcconfig */,
+				079B9497C8828C2619D25698 /* Pods_TapResearchDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9DDEA676DC1C1CF8B731C5E7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BB802E0863DA84EE14A99BE7 /* Pods-TapResearchDemo.debug.xcconfig */,
+				628BD431DAC5C5C68026015E /* Pods-TapResearchDemo.release.xcconfig */,
 			);
 			name = Pods;
 			path = Pods;
@@ -124,12 +124,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3B16B9841EF0BE8300DD0E68 /* Build configuration list for PBXNativeTarget "TapResearchDemo" */;
 			buildPhases = (
-				C96E1D0976B6ABE227BDFBA6 /* [CP] Check Pods Manifest.lock */,
+				F4921DD48A1CA42CE1239E7D /* [CP] Check Pods Manifest.lock */,
 				3B16B96C1EF0BE8300DD0E68 /* Sources */,
 				3B16B96D1EF0BE8300DD0E68 /* Frameworks */,
 				3B16B96E1EF0BE8300DD0E68 /* Resources */,
 				A6179158273C728A005889CD /* Embed Frameworks */,
-				A986BB512997F20AFB3EE13C /* [CP] Embed Pods Frameworks */,
+				98B95712867DE123310B2299 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -189,14 +189,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		A986BB512997F20AFB3EE13C /* [CP] Embed Pods Frameworks */ = {
+		98B95712867DE123310B2299 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-TapResearchDemo/Pods-TapResearchDemo-frameworks.sh",
-				"${PODS_XCFRAMEWORKS_BUILD_DIR}/TapResearch-Internal/TapResearchSDK.framework/TapResearchSDK",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/TapResearch/TapResearchSDK.framework/TapResearchSDK",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -207,7 +207,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TapResearchDemo/Pods-TapResearchDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C96E1D0976B6ABE227BDFBA6 /* [CP] Check Pods Manifest.lock */ = {
+		F4921DD48A1CA42CE1239E7D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -266,7 +266,7 @@
 /* Begin XCBuildConfiguration section */
 		3B16B9851EF0BE8300DD0E68 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7051711EE4802ADF9023025E /* Pods-TapResearchDemo.debug.xcconfig */;
+			baseConfigurationReference = BB802E0863DA84EE14A99BE7 /* Pods-TapResearchDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DXXY8ZYPTW;
@@ -279,7 +279,7 @@
 		};
 		3B16B9861EF0BE8300DD0E68 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1E77400464D8E0C0CC181F6F /* Pods-TapResearchDemo.release.xcconfig */;
+			baseConfigurationReference = 628BD431DAC5C5C68026015E /* Pods-TapResearchDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DXXY8ZYPTW;

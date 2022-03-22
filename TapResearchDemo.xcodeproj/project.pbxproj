@@ -270,6 +270,7 @@
 				DEVELOPMENT_TEAM = DXXY8ZYPTW;
 				INFOPLIST_FILE = TapResearchDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 2.4.2;
 				PRODUCT_BUNDLE_IDENTIFIER = TR.TapResearchDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -283,6 +284,7 @@
 				DEVELOPMENT_TEAM = DXXY8ZYPTW;
 				INFOPLIST_FILE = TapResearchDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 2.4.2;
 				PRODUCT_BUNDLE_IDENTIFIER = TR.TapResearchDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

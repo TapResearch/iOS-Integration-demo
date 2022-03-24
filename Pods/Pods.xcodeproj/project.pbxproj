@@ -16,7 +16,6 @@
 			dependencies = (
 			);
 			name = TapResearch;
-			productName = TapResearch;
 		};
 /* End PBXAggregateTarget section */
 
@@ -49,8 +48,8 @@
 		5AE6484F2AD5313795D75DAF2305F5FB /* Pods-TapResearchDemo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TapResearchDemo-umbrella.h"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		873C19F0A3E1D448CFBDBBECE24C8616 /* Pods-TapResearchDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TapResearchDemo-dummy.m"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		CA0D06087790F48FBD7EAEAD6CD4395D /* TapResearchSDK.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; path = TapResearchSDK.xcframework; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		CA0D06087790F48FBD7EAEAD6CD4395D /* TapResearchSDK.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = TapResearchSDK.xcframework; sourceTree = "<group>"; };
 		D1464F7D5B093D87CC629130DF98CD0E /* Pods-TapResearchDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TapResearchDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
 		DA93253BBB2847AF35D2DCFD277123C9 /* TapResearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TapResearch.debug.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -152,6 +151,7 @@
 				D66E5BFB94262FCD6A865DE99FB87948 /* Frameworks */,
 				6D1CFF23280AF44888B6982983274CFA /* Support Files */,
 			);
+			name = TapResearch;
 			path = TapResearch;
 			sourceTree = "<group>";
 		};
@@ -203,7 +203,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1320;
+				LastUpgradeCheck = 1240;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -346,7 +346,8 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};

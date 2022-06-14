@@ -11,7 +11,5 @@
 
 @interface ViewController : UIViewController<TapResearchSurveyDelegate, TapResearchRewardDelegate, TapResearchPlacementDelegate>
 
-@property (strong, nonatomic) TRPlacement *tapresearchPlacement;
-
 @end
 

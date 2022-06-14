@@ -10,8 +10,8 @@
 #import "AppDelegate.h"
 #import <TapResearchSDK/TapResearchSDK.h>
 
-static NSString * const apiToken = @"7d08c962b40ac7aa0cf83c4d376fa36f";//@"<Your API Key>";
-static NSString * const uniqueIdentifier = @"Nascar";//@"<UserIdentifier>";
+static NSString * const apiToken = @"<Your API Key>";
+static NSString * const uniqueIdentifier = @"<UserIdentifier>";
 
 @interface ViewController ()
 

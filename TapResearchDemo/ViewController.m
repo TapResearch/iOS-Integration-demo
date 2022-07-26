@@ -10,111 +10,165 @@
 #import "AppDelegate.h"
 #import <TapResearchSDK/TapResearchSDK.h>
 
+static NSString * const apiToken = @"<Your API Key>";
+static NSString * const uniqueIdentifier = @"<UserIdentifier>";
 
 @interface ViewController ()
 
-@property (nonatomic, strong) UIActivityIndicatorView *activityIndicator;
-@property (nonatomic, strong) UIButton *surveyButton;
+@property (nonatomic, strong) IBOutlet UIActivityIndicatorView *activityIndicator;
+@property (nonatomic, strong) IBOutlet UIButton *surveyButton;
+
+@property (nonatomic, strong) NSMutableDictionary *placements;
 
 @end
 
+///---------------------------------------------------------------------------------------------
 @implementation ViewController
 
+///---------------------------------------------------------------------------------------------
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.surveyButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    self.surveyButton.frame = CGRectMake(100, 170, 200, 50);
-    self.surveyButton.layer.cornerRadius = 10;
-    self.surveyButton.backgroundColor = UIColor.systemBlueColor;
-    [self.surveyButton setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
-    [self.surveyButton setTitle:@"Tap to take survey" forState:UIControlStateNormal];
-    self.surveyButton.alpha = 0.0;
-    [self.view addSubview:self.surveyButton];
-    
-    [self.surveyButton addTarget:self action:@selector(showSurvey) forControlEvents:UIControlEventTouchUpInside];
-    self.surveyButton.center = self.view.center;
-    
-    self.activityIndicator = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 20.0f, 20.0f)];
-    [self.activityIndicator setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleGray];
-    [self.view addSubview:self.activityIndicator];
-    self.activityIndicator.center = self.view.center;
-    [self.activityIndicator startAnimating];
-    
-    [self initSDK];
+
+	self.placements = [[NSMutableDictionary alloc] init];
+	self.surveyButton.layer.cornerRadius = 10.0;
+	self.surveyButton.alpha = 0.0;
+	[self.activityIndicator startAnimating];
+	
+	[self initSDK];
 }
 
-- (void)viewWillDisappear:(BOOL)animated {
-    self.activityIndicator = nil;
-}
-
-- (void)showSurveyAvailableButton {
-    dispatch_async( dispatch_get_main_queue(), ^{
-        [[NSNotificationCenter defaultCenter] removeObserver:self name:@"SurveyAvailableNotification" object:nil];
-        [self.activityIndicator stopAnimating];
-        self.surveyButton.alpha = 0.0;
-        [UIView animateWithDuration:0.75 animations:^{self.surveyButton.alpha = 1.0;}];
-    });
-}
-
-// present survey wall when surveys are available
-- (void)showSurvey {
-    NSLog(@"Placement: %@:", self.tapresearchPlacement.placementIdentifier);
-    [self.tapresearchPlacement showSurveyWallWithDelegate:self];
-}
-
-//SDK must be initialized with an api token and uniqueIdentifier
+///---------------------------------------------------------------------------------------------
+///SDK must be initialized with an api token and uniqueIdentifier
 - (void)initSDK {
-    [TapResearch initWithApiToken: @"7d08c962b40ac7aa0cf83c4d376fa36f" rewardDelegate:self placementDelegate:self];
-    [TapResearch setUniqueUserIdentifier:@"Nascar"];
+	
+	[TapResearch initWithApiToken:apiToken rewardDelegate:self placementDelegate:self];
+	[TapResearch setUniqueUserIdentifier:uniqueIdentifier];
 }
 
-- (void)showNotificationDialogwith:(NSString *)title message:(NSString *)message {
-    UIAlertController *controller = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *action = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
-    [controller addAction:action];
-    
-    [self presentViewController:controller animated:YES completion:nil];
+///---------------------------------------------------------------------------------------------
+/// present survey wall only when surveys are available.
+- (IBAction)handleSurveySelected:(id)sender {
+	
+	if (self.placements.count) {
+		if (self.placements.count == 1) {
+			[(TRPlacement*)self.placements.allValues[0] showSurveyWallWithDelegate:self];
+		}
+		else {
+			UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"TapResearch" message:@"Choose an available placememt" preferredStyle:UIAlertControllerStyleAlert];
+			for (NSString *key in self.placements.allKeys) {
+				UIAlertAction *action = [UIAlertAction actionWithTitle:key style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+					[(TRPlacement*)self.placements[action.title] showSurveyWallWithDelegate:self];
+				}];
+				[controller addAction:action];
+			}
+			UIAlertAction *action = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil];
+			[controller addAction:action];
+			[self presentViewController:controller animated:YES completion:nil];
+		}
+	}
 }
 
-#pragma mark - TapResearch Delegates
+//MARK: - TapResearchPlacementDelegate
 
-// When the TapResearch modal is dismissed, this method is called with an array of TRReward to be used within your app
-- (void)tapResearchDidReceiveRewards:(nonnull NSArray<TRReward *> *)rewards {
-    NSLog(@"Reward Received!");
-    NSString *title = @"Congrats!";
-    NSString *message = [NSString stringWithFormat:@"You have just received %lu %@ for your efforts.", (long)rewards.firstObject.rewardAmount, rewards.firstObject.currencyName];
-    [self showNotificationDialogwith:title message:message];
-}
-
-// After the SDK is initialized, this delegate is called for each placement
+///---------------------------------------------------------------------------------------------
+/// After the SDK is initialized, this delegate is called for each placement
 - (void)placementReady:(nonnull TRPlacement *)placement {
-    NSLog(@"✅ placement ready");
-    
-    if (!self.tapresearchPlacement) {
-        self.tapresearchPlacement = placement;
-        if (placement.isSurveyWallAvailable && placement.placementCode != PLACEMENT_CODE_SDK_NOT_READY) {
-            [self showSurveyAvailableButton];
-        }
-    }
+	NSLog(@"TapResearch: Placement Ready! %@, wall %d, hot %d, maxlen %ld, plcode %ld", placement.placementIdentifier, (int)placement.isSurveyWallAvailable, (int)placement.hasHotSurvey, placement.maxSurveyLength, placement.placementCode);
+
+	[self.placements setObject:placement forKey:placement.placementIdentifier];
+
+	dispatch_async( dispatch_get_main_queue(), ^{
+		[UIView animateWithDuration:0.5 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+			self.surveyButton.alpha = 1.0;
+		} completion:^(BOOL done) {
+			self.surveyButton.alpha = 1.0;
+			[self.activityIndicator stopAnimating];
+		}];
+	});
 }
 
-// If the placement is not available for any reason, this delegate is called
+///---------------------------------------------------------------------------------------------
+/// If the placement is not available for any reason, this delegate is called
 - (void)placementUnavailable:(nonnull NSString *)placementId {
-    NSLog(@"Placement Unavailable");
+	NSLog(@"TapResearch: Placement Unavailable! %@", placementId);
+
+	[self.placements removeObjectForKey:placementId];
+	
+	if (!self.placements.count) {
+		dispatch_async( dispatch_get_main_queue(), ^{
+			[UIView animateWithDuration:0.5 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+				self.surveyButton.alpha = 0.0;
+			} completion:^(BOOL done) {
+				self.surveyButton.alpha = 0.0;
+				[self.activityIndicator startAnimating];
+			}];
+		});
+	}
 }
 
-#pragma mark - TapResearchSurveyDelegate
+//MARK: - TapResearchSurveyDelegate
 
-// This delegate is called when the survey wall is opened
+///---------------------------------------------------------------------------------------------
+/// This delegate is called when the survey wall is opened
 - (void)tapResearchSurveyWallOpenedWithPlacement:(TRPlacement *)placement; {
-    NSLog(@"Survey wall opened");
+	NSLog(@"TapResearch: Modal opened with placement %@", placement.placementIdentifier);
 }
 
-// This delegate is called when the survey wall is dismissed
+///---------------------------------------------------------------------------------------------
+/// This delegate is called when the survey wall is dismissed
 - (void)tapResearchSurveyWallDismissedWithPlacement:(TRPlacement *)placement; {
-    NSLog(@"Survey wall dismissed");
-    self.tapresearchPlacement = nil;
+	NSLog(@"TapResearch: Modal dismissed with placement %@", placement.placementIdentifier);
+}
+
+//MARK: - TapResearchRewardDelegate
+
+///---------------------------------------------------------------------------------------------
+/// When there are rewards this delegate is called with an array of TRReward objects.
+/// This example implementation can handle multiple currency names in rewards.
+- (void)tapResearchDidReceiveRewards:(nonnull NSArray<TRReward *> *)rewards {
+	NSLog(@"Rewards (%ld) Received!", rewards.count);
+		
+	NSMutableDictionary *values = [[NSMutableDictionary alloc] init];
+	for (TRReward *reward in rewards) {
+		if (values[reward.currencyName]) {
+			long v = [values[reward.currencyName] longValue];
+			v += reward.rewardAmount;
+			values[reward.currencyName] = [NSNumber numberWithLong:v];
+		}
+		else {
+			values[reward.currencyName] = [NSNumber numberWithLong:reward.rewardAmount];
+		}
+	}
+	
+	NSMutableString *string = [[NSMutableString alloc] initWithString:@"You have just received "];
+	int i = 1;
+	int c = (int)values.allKeys.count;
+	for (NSString *key in values) {
+		[string appendFormat:@"%ld %@", [values[key] longValue], key];
+		if (i == c - 1) {
+			[string appendString:@" and "];
+		}
+		else if (i == c) {
+			[string appendString:@" for your efforts!"];
+		}
+		else {
+			[string appendString:@", "];
+		}
+		i++;
+	}
+	
+	[self presentAlert:@"Congrats!" message: string];
+}
+
+///---------------------------------------------------------------------------------------------
+- (void)presentAlert:(NSString*)title message:(NSString*)message {
+
+	dispatch_async( dispatch_get_main_queue(), ^{
+		UIAlertController *controller = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+		UIAlertAction *action = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+		[controller addAction:action];
+		[self presentViewController:controller animated:YES completion:nil];
+	});
 }
 
 @end

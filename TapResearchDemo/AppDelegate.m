@@ -1,19 +1,14 @@
 //
 //  AppDelegate.m
-//  TestPod
+//  
 //
-//  Created by Ilan Caspi on 5/22/17.
-//  Copyright © 2017 Ilan Caspi. All rights reserved.
+//  Created by Jeroen Verbeek on 10/24/22.
+//  Copyright © 2022 TapResearch. All rights reserved.
 //
 
 #import "AppDelegate.h"
 
-@interface AppDelegate ()
-
-@end
-
 @implementation AppDelegate
-
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     return YES;

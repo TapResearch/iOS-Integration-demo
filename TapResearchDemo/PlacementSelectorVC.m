@@ -9,7 +9,7 @@
 #import <TapResearchSDK/TapResearchSDK.h>
 #import "PlacementSelectorVC.h"
 
-static NSString * const tapResearchApiToken = @"<API_TOKEN>"
+static NSString * const tapResearchApiToken = @"<API_TOKEN>";
 static NSString * const uniqueUserIdentifier = @"<player_identifier>";
 
 @interface PlacementSelectorVC ()
